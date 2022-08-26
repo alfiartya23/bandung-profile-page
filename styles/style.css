@@ -1,9 +1,8 @@
 @import url("https://fonts.googleapis.com/css?family=Quicksand:400,700&display=swap");
 
-/* * {
-  margin: 0;
-  padding: 0;
-} */
+* {
+  box-sizing: border-box;
+}
 
 body {
   font-family: "Quicksand", sans-serif;
@@ -11,8 +10,18 @@ body {
   padding: 0;
 }
 
+header {
+  display: inline;
+}
+
 main {
   padding: 20px;
+  overflow: auto;
+}
+
+#content {
+  float: left;
+  width: 75%;
 }
 
 h2,
@@ -20,32 +29,21 @@ h3 {
   color: #00a2c6;
 }
 
-nav a {
-  font-size: 18;
-  font-weight: 400;
-  text-decoration: none;
-}
-
-nav a:hover {
-  font-weight: bold;
-  color: tomato;
-}
-
-.profile header {
-  text-align: center;
-}
-
+/* JUMBOTRON */
 .jumbotron {
-  padding: 20px;
+  padding: 50px;
   background-color: #00c8eb;
   text-align: center;
   font-size: 20px;
   color: white;
 }
 
+/* NAVIGATION */
 nav {
   background-color: #00a2c6;
   padding: 5px;
+  position: fixed;
+  top: 0;
 }
 
 nav li {
@@ -59,6 +57,17 @@ nav a {
   font-size: 18px;
   font-weight: 400;
   text-decoration: none;
+}
+
+nav a {
+  font-size: 18;
+  font-weight: 400;
+  text-decoration: none;
+}
+
+nav a:hover {
+  font-weight: bold;
+  text-decoration: underline;
 }
 
 .featured-image {
@@ -75,14 +84,37 @@ nav a {
   margin-top: 20px;
 }
 
+/* PROFILE SECTION */
+aside {
+  float: right;
+  width: 25%;
+  padding-left: 20px;
+}
+
+/* BANDUNG PROFILE */
+.profile header {
+  text-align: center;
+}
+
+/* PROFILE IMAGE */
 .profile img {
   width: 200px;
 }
 
+/* FOOTER */
 footer {
   padding: 20px;
   color: white;
   background-color: #00a2c6;
   text-align: center;
   font-weight: bold;
+}
+
+/* MEDIA QUERIES */
+@media screen and (max-width: 1000px) {
+  #content,
+  aside {
+    width: 100%;
+    padding: 0;
+  }
 }
